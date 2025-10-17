@@ -5,7 +5,7 @@
 from datetime import datetime
 import csv, io
 
-now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+now = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
 
 # objects of this class holds goods and their names in English, Sumerian, and Akkadian
 # the class also define methods to add new terms in each of the languagues
@@ -134,7 +134,7 @@ for file in list_of_atf_files:
     f.close()
 
 # open the file to write the report
-h = io.open('data/report_pd'+now+'.csv','w', encoding='utf-8')
+h = io.open('reports/report_pd'+now+'.csv','w', encoding='utf-8')
 
 # now loop through the csv metadata files to get the year of the document and
 # to count how many documents per year (for each good)
