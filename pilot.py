@@ -95,13 +95,11 @@ for word in ['a2-bu-ru-um-ma', 'a2-bu-ru-ma', 'a2-bu-ru-ru-ma', 'a2-bu-ru-um'
 
 # define a list of goods you want to track
 
-#to_track = [beer, oil, bread, grain, sheep, ox, onion]
-to_track = [ox, shoe]
+to_track = [beer, oil, bread, grain, sheep, ox, onion]
 
 # define the locations you want to track
 
-locations = {'Puzriš-Dagan (mod. Drehem)': 'pd', 'Girsu (mod. Tello)': 'girsu'}
-#locations = {'Umma (mod. Tell Jokha)': 'umma'}
+locations = {'Puzriš-Dagan (mod. Drehem)': 'pd', 'Girsu (mod. Tello)': 'girsu', 'Umma (mod. Tell Jokha)': 'umma'}
 
 # define the kings whose reigns you want to track
 
@@ -134,7 +132,7 @@ for file in list_of_atf_files:
     f.close()
 
 # open the file to write the report
-h = io.open('reports/report_pd'+now+'.csv','w', encoding='utf-8')
+h = io.open('reports/report_'+now+'.csv','w', encoding='utf-8')
 
 # now loop through the csv metadata files to get the year of the document and
 # to count how many documents per year (for each good)
